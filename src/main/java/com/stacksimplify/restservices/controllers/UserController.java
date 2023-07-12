@@ -57,7 +57,8 @@ public class UserController {
 	// @RequestBody Annotation
 	// @PostMapping Annotation
 	@ApiOperation(value = "Creates a new user")
-	@PostMapping
+
+ 	@PostMapping
 	public ResponseEntity<Void> createUser(@ApiParam("User information for a new user to be created.") @Valid @RequestBody User user, UriComponentsBuilder builder) {
 		try {
 			userService.createUser(user);

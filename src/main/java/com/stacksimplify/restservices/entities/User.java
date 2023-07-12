@@ -11,7 +11,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
-import org.springframework.hateoas.ResourceSupport;
+import org.springframework.hateoas.RepresentationModel;
+
 
 import com.fasterxml.jackson.annotation.JsonView;
 
@@ -25,7 +26,7 @@ import io.swagger.annotations.ApiModelProperty;
 @Table(name = "user")
 //@JsonIgnoreProperties({"firstname", "lastname"})  -- Static Filtering @JsonIgnore
 //@JsonFilter(value = "userFilter")  -- Used for MappingJacksonValue filtering section
-public class User extends ResourceSupport {
+public class User extends RepresentationModel {
 
 	@ApiModelProperty(notes = " Auto generated unique id", required = true, position = 1)
 	@Id
